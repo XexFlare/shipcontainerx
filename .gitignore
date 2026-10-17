@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.netlify/
+.env
+.env.local
+**/.claude/settings.local.json
+__pycache__/
+.bundle-check/
+
+# Local-only notes for the AI assistant (this repo is public)
+CLAUDE.md

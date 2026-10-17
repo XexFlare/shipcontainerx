@@ -1,0 +1,52 @@
+{
+  "dataset": "ShipContainerX",
+  "version": "1.0.0",
+  "generated": "2026-10-17",
+  "records": 17,
+  "by_category": {
+    "dry": 4,
+    "flat_rack": 2,
+    "hardtop": 3,
+    "open_top": 3,
+    "platform": 2,
+    "reefer": 2,
+    "tank": 1
+  },
+  "by_research_status": {
+    "VERIFIED": 16,
+    "PARTIAL": 1
+  },
+  "sources": 11,
+  "field_completeness": {
+    "id": 17,
+    "name": 17,
+    "category": 17,
+    "iso_size_type": 16,
+    "iso_type_group": 17,
+    "height_class": 17,
+    "nominal_length_ft": 17,
+    "external_length_mm": 17,
+    "external_width_mm": 17,
+    "external_height_mm": 15,
+    "internal_length_mm": 14,
+    "internal_width_mm": 14,
+    "internal_height_mm": 14,
+    "max_stow_height_mm": 2,
+    "door_width_mm": 12,
+    "door_height_mm": 12,
+    "roof_opening_length_mm": 6,
+    "roof_opening_width_mm": 6,
+    "deck_height_mm": 4,
+    "max_gross_kg": 16,
+    "tare_kg": 16,
+    "max_payload_kg": 16,
+    "temperature_min_c": 2,
+    "temperature_max_c": 2,
+    "capacity_m3": 12,
+    "floor": 5,
+    "power_supply": 2,
+    "special_features": 17
+  },
+  "validation_issue_counts": {},
+  "parquet_written": true
+}

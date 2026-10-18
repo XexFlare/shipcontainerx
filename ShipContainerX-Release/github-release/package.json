@@ -1,0 +1,19 @@
+{
+  "name": "shipcontainerx",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ShipContainerX: an open, source-cited dataset of ISO container types (data, provenance, validation and examples).",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "example:json": "node examples/javascript/read-json.mjs",
+    "example:api": "node examples/javascript/api-client.mjs"
+  },
+  "dependencies": {
+    "hyparquet": "1.31.4"
+  },
+  "keywords": ["shipping containers", "iso 6346", "logistics", "dataset", "open-data"]
+}

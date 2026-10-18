@@ -1,0 +1,32 @@
+name: Data correction
+description: A value in an existing container record is wrong, outdated or missing.
+title: "[Correction] <id>: <field>"
+labels: ["data-correction"]
+body:
+  - type: input
+    id: container_id
+    attributes:
+      label: id
+      description: The record's id, for example 40-hc-dry.
+    validations:
+      required: true
+  - type: input
+    id: field
+    attributes:
+      label: Field
+      description: For example internal_length_mm, tare_kg, iso_size_type
+    validations:
+      required: true
+  - type: textarea
+    id: values
+    attributes:
+      label: Current value and proposed value
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source(s)
+      description: Public link or document, ideally the manufacturer or carrier specification. Say which series it applies to.
+    validations:
+      required: true

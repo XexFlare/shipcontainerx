@@ -1,0 +1,24 @@
+name: Missing container type
+description: A container type that is not in ShipContainerX.
+title: "[Missing] <type>"
+labels: ["new-type"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Type and ISO 6346 size-type code, if known
+      description: For example 40ft standard-height reefer, 42R1
+    validations:
+      required: true
+  - type: textarea
+    id: specs
+    attributes:
+      label: Dimensions and weights
+      description: Inside and outside dimensions, tare, max gross, capacity, as published.
+  - type: textarea
+    id: source
+    attributes:
+      label: Source(s)
+      description: Public link or document. Say which series or manufacturer it applies to.
+    validations:
+      required: true

@@ -2,7 +2,7 @@
   "name": "shipcontainerx-release",
   "version": "1.0.0",
   "private": true,
-  "description": "Release tooling for ShipContainerX v1.0.0: builds the API data module from the dataset files and checks the API.",
+  "description": "Release tooling for ShipContainerX v1.0.0: builds the API data module and the Hugging Face and GitHub packages from the dataset files, and validates them.",
   "type": "module",
   "engines": {
     "node": ">=20"
@@ -12,6 +12,12 @@
     "build:data": "node scripts/build-api-data.mjs",
     "test:api": "npm --prefix api test",
     "verify:api-bundle": "npm --prefix api run verify:bundle",
-    "release": "npm run build:dataset && npm run build:data && npm run test:api && npm run verify:api-bundle"
+    "release": "npm run build:dataset && npm run build:data && npm run build:release && npm run build:hf && npm run validate && npm run test:api && npm run verify:api-bundle",
+    "build:release": "node scripts/build-release.mjs",
+    "build:hf": "python scripts/build_hf_parquet.py",
+    "validate": "node scripts/validate.mjs"
+  },
+  "dependencies": {
+    "hyparquet": "1.31.4"
   }
 }

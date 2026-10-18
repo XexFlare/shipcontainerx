@@ -1,0 +1,169 @@
+{
+  "dataset": "ShipContainerX",
+  "version": "1.0.0",
+  "checked": "2026-10-18",
+  "checks": [
+    {
+      "id": "count.json",
+      "description": "JSON record_count (17) equals the number of records",
+      "passed": true,
+      "details": 17
+    },
+    {
+      "id": "count.jsonl",
+      "description": "JSONL line count equals record_count",
+      "passed": true,
+      "details": 17
+    },
+    {
+      "id": "count.csv",
+      "description": "CSV row count equals record_count",
+      "passed": true,
+      "details": 17
+    },
+    {
+      "id": "count.parquet",
+      "description": "Parquet row count equals record_count",
+      "passed": true,
+      "details": 17
+    },
+    {
+      "id": "id.unique",
+      "description": "id values are unique",
+      "passed": true
+    },
+    {
+      "id": "id.format",
+      "description": "id is lower-case letters, digits and hyphens",
+      "passed": true
+    },
+    {
+      "id": "iso.unique",
+      "description": "ISO size-type codes are unique",
+      "passed": true
+    },
+    {
+      "id": "iso.format",
+      "description": "ISO size-type code is 4 characters (letters and digits)",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "schema.required",
+      "description": "Required fields present: id, name, category, iso_type_group, height_class, nominal_length_ft, external_length_mm, external_width_mm, research_status, source_ids",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "schema.keys",
+      "description": "Every JSON record has the same fields in the same order",
+      "passed": true
+    },
+    {
+      "id": "schema.csv_columns",
+      "description": "CSV columns equal the JSON fields minus fields_detail",
+      "passed": true
+    },
+    {
+      "id": "schema.parquet_columns",
+      "description": "Parquet columns equal the CSV columns",
+      "passed": true
+    },
+    {
+      "id": "vocab.category",
+      "description": "category is in the published vocabulary",
+      "passed": true
+    },
+    {
+      "id": "vocab.status",
+      "description": "research_status is VERIFIED or PARTIAL",
+      "passed": true
+    },
+    {
+      "id": "format.jsonl",
+      "description": "JSONL records are deep-equal to JSON records",
+      "passed": true
+    },
+    {
+      "id": "format.csv",
+      "description": "Every CSV cell matches the JSON value (lists joined with \"; \")",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "format.parquet",
+      "description": "Every Parquet value matches the JSON value",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "numbers.payload",
+      "description": "max_payload_kg = max_gross_kg minus tare_kg",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "numbers.inside_lt_outside",
+      "description": "Inside dimensions are smaller than the outside dimensions",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "numbers.capacity",
+      "description": "capacity_m3 is within 5% of length x width x height",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "sources.unique",
+      "description": "source_id values are unique",
+      "passed": true
+    },
+    {
+      "id": "sources.resolve",
+      "description": "Every source_ids entry exists in sources.csv",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "provenance.fields_detail",
+      "description": "fields_detail values equal the record values and cite registered sources",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "provenance.confidence",
+      "description": "Every confidence is CONFIRMED, STRONG or SUPPORTED (or empty for definitions)",
+      "passed": true
+    },
+    {
+      "id": "provenance.cited",
+      "description": "Every field with a confidence cites at least one source",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "provenance.cargo",
+      "description": "Every typical_cargo entry has a reason and a source",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "sources.used",
+      "description": "Every registered source is cited by at least one record",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "hf.full",
+      "description": "shipcontainerx_full.parquet equals the JSONL records (nulls ignored)",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "hf.sources",
+      "description": "sources.parquet equals sources.csv",
+      "passed": true
+    }
+  ]
+}

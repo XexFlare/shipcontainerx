@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use ShipContainerX, please cite it as an open reference dataset of representative container specifications, not as a manufacturer catalogue."
+type: dataset
+title: "ShipContainerX: an open, source-cited dataset of ISO container types"
+version: 1.0.0
+license: CC-BY-4.0
+date-released: 2026-10-17
+repository-code: "https://github.com/XexFlare/shipcontainerx"
+authors:
+  - name: "XexFlare"
+keywords:
+  - shipping containers
+  - ISO 6346
+  - logistics
+  - freight
+  - open data

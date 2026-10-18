@@ -1,0 +1,13 @@
+{
+  "dataset": "ShipContainerX",
+  "version": "1.0.0",
+  "release_prepared": "2026-10-18",
+  "license": {
+    "status": "chosen",
+    "spdx": "CC-BY-4.0",
+    "name": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "note": "Free to share and adapt, including commercially, with attribution to ShipContainerX."
+  },
+  "description": "An open, structured, source-cited dataset of ISO container types: dimensions, door and roof openings, weights, capacity, ISO 6346 codes, reefer temperature ranges and the cargo each type suits."
+}

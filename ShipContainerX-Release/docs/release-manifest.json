@@ -1,0 +1,36 @@
+{
+  "dataset": "ShipContainerX",
+  "version": "1.0.0",
+  "generated": "2026-10-17",
+  "release_prepared": "2026-10-18",
+  "license": "CC-BY-4.0",
+  "source_files": [
+    {
+      "path": "Data/shipcontainerx.csv",
+      "sha256": "cbf7963c191d616b73d2f0af321a6d031223caa85f3f7490a7733075bfa9b8f3"
+    },
+    {
+      "path": "Data/shipcontainerx.json",
+      "sha256": "aa8cfad5514163853f2d7e5f12915758b7df6ebe1ee18c094aadb84127358eb3"
+    },
+    {
+      "path": "Data/shipcontainerx.jsonl",
+      "sha256": "08c02507480185e7386d74a028a98ab378717840af4a5f541e8d97dc4a3f72bc"
+    },
+    {
+      "path": "Data/shipcontainerx.parquet",
+      "sha256": "729d7392185114723dbe1da280863b8549b25b4cd3e57880c3cc9fdb492b0828"
+    },
+    {
+      "path": "Data/sources.csv",
+      "sha256": "856be40563c1ce5ddcb7b7606ed1836aef83aa0c7becc7f2423be45145ef4a13"
+    }
+  ],
+  "statistics": {
+    "total_records": 17
+  },
+  "outputs": [
+    "huggingface-dataset/data",
+    "github-release/data"
+  ]
+}

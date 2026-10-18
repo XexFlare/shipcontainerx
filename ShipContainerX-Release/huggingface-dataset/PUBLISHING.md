@@ -25,8 +25,8 @@ python -c "from huggingface_hub import create_tag; create_tag('xexflare/shipcont
 ## Option B: web upload
 
 1. https://huggingface.co/new-dataset: owner `xexflare`, name `shipcontainerx`, visibility **Public**.
-2. *Files and versions*, *Add file*, *Upload files*: upload `README.md`, `CHANGELOG.md`,
-   `.gitattributes` and the `data/` folder (keep the `data/` path).
+2. *Files and versions*, *Add file*, *Upload files*: upload `README.md`, `CHANGELOG.md`
+   and the `data/` folder (keep the `data/` path).
 
 ## Repository settings
 

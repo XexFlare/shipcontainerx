@@ -1,16 +1,14 @@
 # ShipContainerX v1.0.0: release package
 
-The ShipContainerX API, the Hugging Face package and the GitHub package, all built from `../Data`.
-The API uses the X dataset API template (ShipPortX, `ShipPortX-Release/api/API_TEMPLATE.md`).
-There is no website yet. Steps to publish: [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md).
+The Hugging Face package and the GitHub package, built from `../Data`.
+The API is built from the same data in the private `shipcontainerx-web-api` repo (X dataset API template). There is no website yet. Steps to publish: [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md).
 
 | Folder | What it is | Publish to |
 |---|---|---|
-| `api/` | Read-only JSON API (one Netlify Function) plus the usage-logging edge function, hourly rollup and private `/stats/` page | Netlify |
 | `huggingface-dataset/` | Hugging Face dataset repository: card, data files, three configs ([PUBLISHING.md](huggingface-dataset/PUBLISHING.md)) | Hugging Face Hub |
 | `github-release/` | Standalone package: data, docs, validation, examples, issue templates | GitHub release |
 | `docs/` | Release manifest and validation report | n/a |
-| `scripts/` | `build-api-data.mjs` (API module), `build-release.mjs` (package copies, checksums, manifest), `build_hf_parquet.py` (Hugging Face Parquet twins), `validate.mjs` (checks) | n/a |
+| `scripts/` | `build-release.mjs` (package copies, checksums, manifest), `build_hf_parquet.py` (Hugging Face Parquet twins), `validate.mjs` (checks) | n/a |
 | `release.config.json` | Version, dates and license | n/a |
 
 ## Endpoints
@@ -31,17 +29,12 @@ the ShipPortX API (see the template).
 ## Rebuild and check
 
 ```bash
-cd api && npm install && cd ..
-npm run release   # build_dataset.py -> API data -> packages -> Parquet twins -> 29 checks -> 26 API tests -> bundle check
+npm install
+npm run release   # build_dataset.py -> packages -> Parquet twins -> 29 checks
 ```
 
-`build_dataset.py` and `build_hf_parquet.py` need `pandas` and `pyarrow`.
+`build_dataset.py` and `build_hf_parquet.py` need `pandas` and `pyarrow`. After the data changes, run `npm run check` in the private `shipcontainerx-web-api` repo to regenerate the API module and redeploy the API.
 
-## Deploy (needs the maintainer's Netlify account)
+## API deployment
 
-1. New Netlify site, Base directory `ShipContainerX-Release/api` (uses `api/netlify.toml`).
-2. Environment variables, same values as the ShipPortX API: `FIREBASE_SERVICE_ACCOUNT`, `STATS_TOKEN`.
-   Without them the API serves data and logs nothing.
-3. The Firestore TTL policy on collection group `calls` (field `expireAt`) is shared by all
-   dataset APIs: set it once per project.
-4. Check `/api/health` and `/api/v1/containers?client=deploy-check`.
+The API code, Netlify configuration and deployment steps are in the private `shipcontainerx-web-api` repo.

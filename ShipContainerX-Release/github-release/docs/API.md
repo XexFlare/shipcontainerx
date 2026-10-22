@@ -1,8 +1,7 @@
 # ShipContainerX HTTP API
 
 A free, public, read-only JSON API over the v1.0.0 records in `data/`. No key, no sign-up; CORS
-allows any origin. The API source code and deployment configuration live in the repository under
-`ShipContainerX-Release/api`.
+allows any origin. The API source code and deployment configuration are kept in a separate private repository.
 
 **Credit:** "Container data: ShipContainerX (CC BY 4.0)".
 

@@ -1,6 +1,6 @@
 # ShipContainerX release validation
 
-Dataset ShipContainerX v1.0.0, 17 records, checked 2026-10-18. 29 of 29 checks pass.
+Dataset ShipContainerX v1.0.0, 17 records, checked 2026-10-22. 29 of 29 checks pass.
 
 > These are automated format and consistency checks. They do not independently re-verify the research.
 

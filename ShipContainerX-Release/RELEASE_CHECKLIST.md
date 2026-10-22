@@ -24,17 +24,16 @@ Done = built and verified locally on 2026-10-18. Open = needs the maintainer's a
 1. GitHub: the repository `XexFlare/shipcontainerx` already exists. Push the commit, then create a release
    `v1.0.0` and attach the five files in `github-release/data/` plus `SHA256SUMS`.
 2. Hugging Face: log in as `xexflare`, create a write token, and follow `huggingface-dataset/PUBLISHING.md`.
-3. API: deploy as described in `README.md` (Netlify, Base directory `ShipContainerX-Release/api`).
+3. API: deploy from the private `shipcontainerx-web-api` repo (see its README, Netlify, Base directory `api`).
 
 ## D. Rebuild everything
 
 ```bash
 npm install
-cd api && npm install && cd ..
 pip install pandas pyarrow
 npm run release
 ```
 
 `npm run release` = `build:dataset` (needs the private research repo beside this one) then
-`build:data` (API module), `build:release` (package copies, checksums, manifest), `build:hf`
-(Parquet twins), `validate`, `test:api`, `verify:api-bundle`.
+`build:release` (package copies, checksums, manifest), `build:hf`
+(Parquet twins) and `validate`.

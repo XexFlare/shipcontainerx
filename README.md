@@ -26,8 +26,8 @@ confidence level.
 - **Hugging Face:** the dataset card and Parquet configs are in
   [`ShipContainerX-Release/huggingface-dataset/`](ShipContainerX-Release/huggingface-dataset/README.md)
   (upload steps in `PUBLISHING.md` there).
-- **API:** a read-only JSON API with filters (category, length, payload, capacity, cargo) is in
-  [`ShipContainerX-Release/`](ShipContainerX-Release/README.md).
+- **API:** a read-only JSON API with filters (category, length, payload, capacity, cargo) serves this data; its endpoints are documented in
+  [`ShipContainerX-Release/`](ShipContainerX-Release/README.md). The API code is kept in a separate private repository.
 
 ```python
 import pandas as pd
@@ -44,7 +44,7 @@ reefers = df[df["category"] == "reefer"]
 | `SCHEMA.md` | Field reference |
 | `reports/` | Build summary and validation report |
 | `scripts/build_dataset.py` | Builds `Data/` from the research records (the records themselves are kept private); tests with `python -m unittest discover scripts` |
-| `ShipContainerX-Release/` | API, Hugging Face package, GitHub package, validation and release tooling |
+| `ShipContainerX-Release/` | Hugging Face package, GitHub package, validation and release tooling |
 
 ## Known limits
 
@@ -60,5 +60,5 @@ Corrections with a public source are welcome: see
 ## License and citation
 
 Dataset, documentation and reports: CC BY 4.0, cite as "ShipContainerX v1.0.0" (see
-[`CITATION.cff`](ShipContainerX-Release/github-release/CITATION.cff)). Scripts and API code: MIT.
+[`CITATION.cff`](ShipContainerX-Release/github-release/CITATION.cff)). Scripts: MIT.
 Facts remain attributable to their original sources, which keep their own terms.
